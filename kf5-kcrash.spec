@@ -3,18 +3,18 @@
 # - these dirs are not own by any package
 #  /usr/include/KF5
 #  /usr/share/kf5
-%define		kdeframever	5.4
+%define		kdeframever	5.10
 %define		qtver		5.3.2
 %define		kfname		kcrash
 
 Summary:	Graceful handling of application crashes
 Name:		kf5-%{kfname}
-Version:	5.4.0
+Version:	5.10.0
 Release:	0.1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	971649d12a57cf1c05c77fb3c4370aea
+# Source0-md5:	f413ced20b4b60bda87cbf2cb7340792
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5DBus-devel >= %{qtver}
@@ -78,7 +78,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README.md
 %attr(755,root,root) %ghost %{_libdir}/libKF5Crash.so.5
-%attr(755,root,root) %{_libdir}/libKF5Crash.so.5.4.0
+%attr(755,root,root) %{_libdir}/libKF5Crash.so.*.*
 
 %files devel
 %defattr(644,root,root,755)
