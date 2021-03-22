@@ -1,17 +1,17 @@
 # TODO:
 # - runtime Requires if any
-%define		kdeframever	5.79
+%define		kdeframever	5.80
 %define		qtver		5.9.0
 %define		kfname		kcrash
 
 Summary:	Graceful handling of application crashes
 Name:		kf5-%{kfname}
-Version:	5.79.0
+Version:	5.80.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	724d4809ae5a9ffac862f7e1eb3961d9
+# Source0-md5:	0475775fee832342fd2c58a6aec9f683
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5DBus-devel >= %{qtver}
@@ -73,7 +73,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README.md
-%attr(755,root,root) %ghost %{_libdir}/libKF5Crash.so.5
+%ghost %{_libdir}/libKF5Crash.so.5
 %attr(755,root,root) %{_libdir}/libKF5Crash.so.*.*
 %{_datadir}/qlogging-categories5/kcrash.categories
 %{_datadir}/qlogging-categories5/kcrash.renamecategories
@@ -83,5 +83,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/KF5/KCrash
 %{_includedir}/KF5/kcrash_version.h
 %{_libdir}/cmake/KF5Crash
-%attr(755,root,root) %{_libdir}/libKF5Crash.so
+%{_libdir}/libKF5Crash.so
 %{qt5dir}/mkspecs/modules/qt_KCrash.pri
