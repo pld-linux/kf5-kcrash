@@ -3,18 +3,18 @@
 %bcond_with	tests		# build with tests
 # TODO:
 # - runtime Requires if any
-%define		kdeframever	5.93
+%define		kdeframever	5.94
 %define		qtver		5.15.2
 %define		kfname		kcrash
 
 Summary:	Graceful handling of application crashes
 Name:		kf5-%{kfname}
-Version:	5.93.0
+Version:	5.94.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/frameworks/%{kdeframever}/%{kfname}-%{version}.tar.xz
-# Source0-md5:	d65a87d6bb2835698bbd11ad287a5c44
+# Source0-md5:	b15403397a15cdd19cc9c37cc641a390
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	Qt5Test-devel >= %{qtver}
